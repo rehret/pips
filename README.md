@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rehret/pips.svg?branch=master)](https://travis-ci.org/rehret/pips)
+
 # Pips
 >Pips are dots indicating a unit of numerical value on dice or dominoes
 

@@ -1,0 +1,11 @@
+{
+    "APP_NAME": "Pips",
+    "PORT": 8000,
+    "LOG_LEVEL": "debug",
+    "LOG_TO_CONSOLE": false,
+    "LOG_TO_FILE": false,
+    "LOG_LINENUMBERS": false,
+    "LOG_FILE_PATH": "./pips.log",
+    "LOG_FILE_ROTATION": "1d",
+    "LOG_FILE_COUNT": 10
+}

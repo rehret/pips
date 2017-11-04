@@ -1,0 +1,38 @@
+{
+  "name": "pips",
+  "version": "1.0.0",
+  "description": "Pips are dots indicating a unit of numerical value on dice or dominoes",
+  "main": "build/index.js",
+  "engines": {
+    "node": "^8.9.0"
+  },
+  "repository": "git@github.com:rehret/pips.git",
+  "author": "Randy Ehret <randyehret@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "develop": "ts-node src/index.ts",
+    "start": "node build/index.js",
+    "build": "tsc",
+    "postbuild": "n-copy -s src -d build \"**/*.json\"",
+    "clean": "n-clean build"
+  },
+  "dependencies": {
+    "@types/bunyan": "^1.8.3",
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.25",
+    "@types/koa-router": "^7.0.23",
+    "@types/nconf": "^0.0.34",
+    "@types/node": "^8.0.47",
+    "@types/shortid": "^0.0.29",
+    "bunyan": "^1.8.12",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "nconf": "^0.9.1",
+    "shortid": "^2.2.8",
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "ts-node": "^3.3.0"
+  }
+}

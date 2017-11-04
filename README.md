@@ -3,6 +3,14 @@
 
 A tiny service which returns dice rolls for a given d20 string (ex: "1d6")
 
+# Prerequisites
+This project uses yarn rather than npm.
+
+Yarn can be installed with
+```bash
+npm install --global yarn
+```
+
 # Setup
 ```bash
 yarn install

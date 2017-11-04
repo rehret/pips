@@ -11,8 +11,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "develop": "ts-node src/index.ts",
-    "start": "node build/index.js",
+    "develop": "ts-node src/index.ts | bunyan",
+    "start": "node build/index.js | bunyan",
     "build": "tsc",
     "postbuild": "n-copy -s src -d build \"**/*.json\"",
     "clean": "n-clean build"

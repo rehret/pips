@@ -6,7 +6,12 @@ export const Log = Bunyan.createLogger({
     name: Nconf.get("APP_NAME"),
     src: Nconf.get("LOG_LINENUMBERS"),
     serializers: Bunyan.stdSerializers,
-    streams: []
+    streams: [
+        {
+            stream: process.stderr,
+            level: "warn"
+        }
+    ]
 });
 
 if (Nconf.get("LOG_TO_CONSOLE")) {

@@ -35,5 +35,19 @@
   },
   "devDependencies": {
     "ts-node": "^3.3.0"
-  }
+  },
+  "apps": [
+    {
+      "name": "Pips",
+      "script": "index.js",
+      "cwd": "build",
+      "instances": 3,
+      "exec_mode": "cluster",
+      "log_type": "json",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 8000
+      }
+    }
+  ]
 }

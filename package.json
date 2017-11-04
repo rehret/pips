@@ -38,7 +38,7 @@
   },
   "apps": [
     {
-      "name": "Pips",
+      "name": "pips",
       "script": "index.js",
       "cwd": "build",
       "instances": 3,

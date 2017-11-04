@@ -27,9 +27,12 @@
     "@types/shortid": "^0.0.29",
     "bunyan": "^1.8.12",
     "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.2.1",
     "nconf": "^0.9.1",
     "npm-build-tools": "^2.2.5",
+    "reflect-metadata": "^0.1.10",
+    "routing-controllers": "^0.7.6",
     "shortid": "^2.2.8",
     "typescript": "^2.6.1"
   },

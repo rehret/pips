@@ -17,7 +17,7 @@ app.use(ErrorLogger);
 app.use(RequestLogger);
 
 useKoaServer(app, {
-    controllers: [`${__dirname}/controllers/*.ts`]
+    controllers: [`${__dirname}/controllers/*.[tj]s`]
 });
 
 let port = Nconf.get("PORT");

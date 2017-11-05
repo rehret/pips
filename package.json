@@ -12,10 +12,11 @@
   "private": false,
   "scripts": {
     "develop": "ts-node src/index.ts | bunyan",
-    "start": "node build/index.js | bunyan",
+    "start": "node build/src/index.js | bunyan",
     "build": "tsc",
-    "postbuild": "n-copy -s src -d build \"**/*.json\"",
-    "clean": "n-clean build"
+    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\"",
+    "clean": "n-clean build",
+    "test": "jasmine-ts"
   },
   "dependencies": {
     "@types/bunyan": "^1.8.3",
@@ -37,6 +38,9 @@
     "typescript": "^2.6.1"
   },
   "devDependencies": {
+    "@types/jasmine": "^2.6.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.2.1",
     "ts-node": "^3.3.0"
   },
   "apps": [

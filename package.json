@@ -47,7 +47,7 @@
     {
       "name": "pips",
       "script": "index.js",
-      "cwd": "build",
+      "cwd": "build/src",
       "instances": 3,
       "exec_mode": "cluster",
       "log_type": "json",

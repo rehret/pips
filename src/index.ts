@@ -4,20 +4,13 @@ import "./config/config";
 import "reflect-metadata";
 
 import * as Nconf from "nconf";
-import * as Koa from "koa";
 import { Log } from "./log";
-import { useKoaServer } from "routing-controllers";
-import { RequestId } from "./middleware/request-id";
-import { RequestLogger } from "./middleware/request-logger";
-import { ErrorLogger } from "./middleware/error-logger";
+import { createKoaServer } from "routing-controllers";
 
-let app = new Koa();
-app.use(RequestId);
-app.use(ErrorLogger);
-app.use(RequestLogger);
-
-useKoaServer(app, {
-    controllers: [`${__dirname}/controllers/*.[tj]s`]
+let app = createKoaServer({
+    controllers: [`${__dirname}/controllers/*.[tj]s`],
+    middlewares: [`${__dirname}/middleware/*.[tj]s`],
+    defaultErrorHandler: false
 });
 
 let port = Nconf.get("PORT");

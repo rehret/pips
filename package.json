@@ -42,19 +42,5 @@
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-ts": "^0.2.1",
     "ts-node": "^3.3.0"
-  },
-  "apps": [
-    {
-      "name": "pips",
-      "script": "index.js",
-      "cwd": "build/src",
-      "instances": 3,
-      "exec_mode": "cluster",
-      "log_type": "json",
-      "env": {
-        "NODE_ENV": "production",
-        "PORT": 8000
-      }
-    }
-  ]
+  }
 }

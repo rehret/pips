@@ -28,7 +28,7 @@ describe("D20 model", () => {
             let d20string = "1d20d10";
 
             // Act & Assert
-            expect(() => new D20(d20string)).toThrow("Invalid d20 syntax");
+            expect(() => new D20(d20string)).toThrowError(Error, "Invalid d20 syntax");
         });
 
         it("should throw an error if number of dice is less than 1", () => {
@@ -36,7 +36,7 @@ describe("D20 model", () => {
             let d20string = "0d20";
 
             // Act & Assert
-            expect(() => new D20(d20string)).toThrow("Dice number and sides must be positive integers");
+            expect(() => new D20(d20string)).toThrowError(Error, "Dice number and sides must be positive integers");
         });
 
         it("should throw an error if number of sides is less than 1", () => {
@@ -44,7 +44,7 @@ describe("D20 model", () => {
             let d20string = "1d0";
 
             // Act & Assert
-            expect(() => new D20(d20string)).toThrow("Dice number and sides must be positive integers");
+            expect(() => new D20(d20string)).toThrowError(Error, "Dice number and sides must be positive integers");
         });
     });
 

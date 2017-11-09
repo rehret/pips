@@ -11,7 +11,7 @@ export class ErrorLogger implements KoaMiddlewareInterface {
         catch(err) {
             Log.error({
                 requestId: ctx.state.requestId,
-                error: err
+                err: err
             }, "Server error");
 
             ctx.throw(err);

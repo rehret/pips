@@ -10,7 +10,7 @@ export class D20 {
         if(typeof d20stringOrNumDice === "string") {
             let d20string = d20stringOrNumDice;
             if(!d20string.match(/^\d+d\d+$/)) {
-                throw `Invalid d20 syntax`;
+                throw new Error(`Invalid d20 syntax`);
             }
 
             let parts = d20string.split("d");
@@ -21,7 +21,7 @@ export class D20 {
         }
 
         if (numDice === NaN || numDice < 1 || numSides === NaN || numSides < 1) {
-            throw `Dice number and sides must be positive integers`;
+            throw new Error(`Dice number and sides must be positive integers`);
         }
 
         this.numDice = numDice;

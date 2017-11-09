@@ -11,8 +11,7 @@ export class RequestLogger implements KoaMiddlewareInterface {
         if (!ignoredUrls.includes(ctx.originalUrl)) {
             Log.info({
                 requestId: ctx.state.requestId,
-                method: ctx.method,
-                url: ctx.originalUrl
+                req: ctx.request
             }, "Request received");
         }
         return await next();

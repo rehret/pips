@@ -37,6 +37,7 @@
     "reflect-metadata": "^0.1.10",
     "routing-controllers": "^0.7.6",
     "shortid": "^2.2.8",
+    "typemoq": "^2.1.0",
     "typescript": "^2.6.1"
   },
   "devDependencies": {

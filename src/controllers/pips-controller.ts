@@ -22,7 +22,8 @@ export class PipsController {
         }
         catch(err) {
             // error occurred during D20 instantiation, so it was a problem with the d20string
-            throw ctx.throw(417, err, {d20: d20string});
+            ctx.throw(417, err, {d20: d20string});
+            throw err;
         }
 
         let response = new PipsResponse(d20string, d20.roll());

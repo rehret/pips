@@ -1,15 +1,23 @@
 import * as Router from "koa-router";
 import { KoaMiddlewareInterface, Middleware } from "routing-controllers";
-import { Log } from "../log";
+import { injectable, inject } from "inversify";
+import * as Bunyan from "bunyan";
 
+@injectable()
 @Middleware({ type: "before" })
 export class ErrorLogger implements KoaMiddlewareInterface {
+    private log: Bunyan;
+
+    constructor(@inject(Bunyan) log: Bunyan) {
+        this.log = log;
+    }
+
     async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
         try {
             return await next();
         }
         catch(err) {
-            Log.error({
+            this.log.error({
                 requestId: ctx.state.requestId,
                 err: err
             }, "Server error");

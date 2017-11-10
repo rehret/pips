@@ -5,7 +5,10 @@ import "reflect-metadata";
 
 import * as Nconf from "nconf";
 import { Log } from "./log";
-import { createKoaServer } from "routing-controllers";
+import { createKoaServer, useContainer } from "routing-controllers";
+import { Container } from "./config/inversify-config";
+
+useContainer(Container);
 
 let app = createKoaServer({
     controllers: [`${__dirname}/controllers/*.[tj]s`],

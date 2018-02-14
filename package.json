@@ -19,13 +19,6 @@
     "test": "jasmine-ts"
   },
   "dependencies": {
-    "@types/bunyan": "^1.8.3",
-    "@types/koa": "^2.0.39",
-    "@types/koa-bodyparser": "^3.0.25",
-    "@types/koa-router": "^7.0.23",
-    "@types/nconf": "^0.0.34",
-    "@types/node": "^8.0.47",
-    "@types/shortid": "^0.0.29",
     "bunyan": "^1.8.12",
     "inversify": "^4.5.1",
     "inversify-logger-middleware": "^3.1.0",
@@ -37,11 +30,19 @@
     "reflect-metadata": "^0.1.10",
     "routing-controllers": "^0.7.6",
     "shortid": "^2.2.8",
+    "swagger2-koa": "^0.0.43",
     "typemoq": "^2.1.0",
     "typescript": "^2.6.1"
   },
   "devDependencies": {
+    "@types/bunyan": "^1.8.3",
     "@types/jasmine": "^2.6.2",
+    "@types/koa-bodyparser": "^3.0.25",
+    "@types/koa-router": "^7.0.23",
+    "@types/koa": "^2.0.44",
+    "@types/nconf": "^0.0.34",
+    "@types/node": "^8.0.47",
+    "@types/shortid": "^0.0.29",
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-ts": "^0.2.1",
     "ts-node": "^3.3.0"

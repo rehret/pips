@@ -1,0 +1,51 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Pips",
+        "description": "",
+        "version": "1.0"
+    },
+    "produces": ["applicaiton/json"],
+    "host": "localhost:8000",
+    "basePath": "/",
+    "paths": {
+        "/{d20string}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "d20string",
+                        "in": "path",
+                        "description": "D20 string to represent the desired dice roll",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful request",
+                        "schema": {
+                            "$ref": "#/definitions/PipsResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "PipsResponse": {
+            "properties": {
+                "request": {
+                    "type": "string"
+                },
+                "rolls": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": ["request", "rolls"]
+        }
+    }
+}

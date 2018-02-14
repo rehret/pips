@@ -14,7 +14,7 @@
     "develop": "ts-node src/index.ts | bunyan",
     "start": "node build/src/index.js | bunyan",
     "build": "tsc",
-    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\"",
+    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\" && n-copy -s . -d build \"swagger.json\"",
     "clean": "n-clean build",
     "test": "jasmine-ts"
   },

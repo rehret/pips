@@ -1,7 +1,6 @@
 {
     "APP_NAME": "Pips",
     "PORT": 8000,
-    "BASE_PATH": "/",
     "LOG_LEVEL": "debug",
     "LOG_TO_CONSOLE": false,
     "LOG_TO_FILE": false,

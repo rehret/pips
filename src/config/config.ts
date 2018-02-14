@@ -12,4 +12,4 @@ Nconf
     .env()
     .file("environmentConfig", `${__dirname}/${env.toLowerCase()}.json`)
     .file("defaultConfig", `${__dirname}/default.json`)
-    .required(["PORT", "BASE_PATH", "LOG_FILE_PATH"]);
+    .required(["PORT", "LOG_FILE_PATH"]);

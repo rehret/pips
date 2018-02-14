@@ -15,7 +15,6 @@ useContainer(Container);
 const app = new Koa();
 
 const swaggerDoc = require("../swagger.json");
-swaggerDoc.basePath = Nconf.get("BASE_PATH");
 app.use(ui(swaggerDoc, "/swagger"));
 
 useKoaServer(app, {

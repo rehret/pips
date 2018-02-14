@@ -8,8 +8,8 @@
     "produces": ["application/json"],
     "paths": {
         "/{d20string}": {
-            "tags": ["Pips"],
             "get": {
+                "tags": ["Pips"],
                 "parameters": [
                     {
                         "name": "d20string",

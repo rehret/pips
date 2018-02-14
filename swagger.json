@@ -6,8 +6,6 @@
         "version": "1.0"
     },
     "produces": ["applicaiton/json"],
-    "host": "localhost:8000",
-    "basePath": "/",
     "paths": {
         "/{d20string}": {
             "get": {

@@ -5,7 +5,7 @@
         "description": "",
         "version": "1.0"
     },
-    "produces": ["applicaiton/json"],
+    "produces": ["application/json"],
     "paths": {
         "/{d20string}": {
             "get": {

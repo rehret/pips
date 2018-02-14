@@ -14,8 +14,8 @@ useContainer(Container);
 
 const app = new Koa();
 
-const swaggerDoc = require("../swagger.json");
-app.use(ui(swaggerDoc, "/swagger"));
+const swaggerDoc = require("../openapi.json");
+app.use(ui(swaggerDoc, "/docs"));
 
 useKoaServer(app, {
     controllers: [`${__dirname}/controllers/*.[tj]s`],

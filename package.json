@@ -32,7 +32,7 @@
     "shortid": "^2.2.8",
     "swagger2-koa": "^0.0.43",
     "typemoq": "^2.1.0",
-    "typescript": "^2.6.1"
+    "typescript": "^2.7.2"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.3",

@@ -41,7 +41,7 @@
     "@types/koa-router": "^7.0.23",
     "@types/koa": "^2.0.44",
     "@types/nconf": "^0.0.34",
-    "@types/node": "^8.0.47",
+    "@types/node": "^9.4.6",
     "@types/shortid": "^0.0.29",
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-ts": "^0.2.1",

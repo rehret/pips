@@ -27,7 +27,7 @@
     "koa-router": "^7.4.0",
     "nconf": "^0.9.1",
     "npm-build-tools": "^2.2.5",
-    "reflect-metadata": "^0.1.10",
+    "reflect-metadata": "^0.1.12",
     "routing-controllers": "^0.7.6",
     "shortid": "^2.2.8",
     "swagger2-koa": "^0.0.43",

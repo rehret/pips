@@ -38,7 +38,7 @@
     "@types/bunyan": "^1.8.4",
     "@types/jasmine": "^2.6.2",
     "@types/koa-bodyparser": "^3.0.25",
-    "@types/koa-router": "^7.0.23",
+    "@types/koa-router": "^7.0.27",
     "@types/koa": "^2.0.44",
     "@types/nconf": "^0.0.37",
     "@types/node": "^9.4.6",

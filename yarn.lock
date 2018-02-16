@@ -13,10 +13,11 @@
     "@types/express" "*"
     "@types/node" "*"
 
-"@types/bunyan@^1.8.3":
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/@types/bunyan/-/bunyan-1.8.3.tgz#e4ec4b4e11ed9c80fb8c1addc05bb37aa3d2fbad"
+"@types/bunyan@^1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@types/bunyan/-/bunyan-1.8.4.tgz#69c11adc7b50538d45fb68d9ae39d062b9432f38"
   dependencies:
+    "@types/events" "*"
     "@types/node" "*"
 
 "@types/connect@*":

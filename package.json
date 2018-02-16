@@ -45,6 +45,6 @@
     "@types/shortid": "^0.0.29",
     "jasmine-spec-reporter": "^4.2.1",
     "jasmine-ts": "^0.2.1",
-    "ts-node": "^3.3.0"
+    "ts-node": "^4.1.0"
   }
 }

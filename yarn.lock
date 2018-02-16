@@ -107,9 +107,9 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
 
-"@types/nconf@^0.0.34":
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/@types/nconf/-/nconf-0.0.34.tgz#3e3b8c0054a0f16412f0cb3a34566b4037a0d077"
+"@types/nconf@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@types/nconf/-/nconf-0.0.37.tgz#a43702a1c57e46139bf084f5b20c23cd7c88a5d1"
 
 "@types/node@*":
   version "8.0.47"

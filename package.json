@@ -14,9 +14,11 @@
     "develop": "ts-node src/index.ts | bunyan",
     "start": "node build/src/index.js | bunyan",
     "build": "tsc",
-    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\" && n-copy -s . -d build \"openapi.json\"",
+    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\" && n-copy -s . -d build \"openapi.json\" && n-copy -s spec -d build/spec \"**/*.json\"",
     "clean": "n-clean build",
-    "test": "jasmine-ts"
+    "pretest": "yarn build",
+    "test": "yarn test:no-build",
+    "test:no-build": "node build/spec/runner.js"
   },
   "dependencies": {
     "bunyan": "^1.8.12",
@@ -43,8 +45,8 @@
     "@types/nconf": "^0.0.37",
     "@types/node": "^9.4.6",
     "@types/shortid": "^0.0.29",
+    "jasmine": "^3.1.0",
     "jasmine-spec-reporter": "^4.2.1",
-    "jasmine-ts": "^0.2.1",
     "ts-node": "^5.0.1"
   }
 }

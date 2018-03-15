@@ -12,14 +12,13 @@ export class ErrorLogger implements KoaMiddlewareInterface {
         this.log = log;
     }
 
-    async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
+    public async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
         try {
             return await next();
-        }
-        catch(err) {
+        } catch (err) {
             this.log.error({
                 requestId: ctx.state.requestId,
-                err: err
+                err
             }, "Server error");
 
             ctx.throw(err);

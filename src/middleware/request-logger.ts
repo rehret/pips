@@ -15,7 +15,7 @@ export class RequestLogger implements KoaMiddlewareInterface {
         this.log = log;
     }
 
-    async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
+    public async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
         if (!ignoredUrls.includes(ctx.originalUrl)) {
             this.log.info({
                 requestId: ctx.state.requestId,

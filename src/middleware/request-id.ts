@@ -6,7 +6,7 @@ import { injectable } from "inversify";
 @injectable()
 @Middleware({ type: "before" })
 export class RequestId implements KoaMiddlewareInterface {
-    async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
+    public async use(ctx: Router.IRouterContext, next: (err?: any) => Promise<any>): Promise<any> {
         ctx.state.requestId = ShortId.generate();
         return await next();
     }

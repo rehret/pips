@@ -13,6 +13,8 @@
   "scripts": {
     "develop": "ts-node src/index.ts | bunyan",
     "start": "node build/src/index.js | bunyan",
+    "lint": "tslint src/**/*.ts spec/**/*.ts",
+    "prebuild": "yarn lint",
     "build": "tsc",
     "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\" && n-copy -s . -d build \"openapi.json\" && n-copy -s spec -d build/spec \"**/*.json\"",
     "clean": "n-clean build",
@@ -53,6 +55,7 @@
     "npm-build-tools": "^2.2.5",
     "sinon": "^4.4.6",
     "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
     "typemoq": "^2.1.0",
     "typescript": "^2.7.2"
   }

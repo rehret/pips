@@ -1,8 +1,8 @@
 export class PipsResponse {
-    request: string;
-    rolls: Array<number>;
+    public request: string;
+    public rolls: number[];
 
-    constructor(request: string, rolls: Array<number>) {
+    constructor(request: string, rolls: number[]) {
         this.request = request;
         this.rolls = rolls;
     }

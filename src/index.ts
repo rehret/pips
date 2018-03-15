@@ -14,6 +14,7 @@ useContainer(Container);
 
 const app = new Koa();
 
+// tslint:disable-next-line:no-var-requires
 const swaggerDoc = require("../openapi.json");
 app.use(ui(swaggerDoc, "/docs"));
 
@@ -23,7 +24,7 @@ useKoaServer(app, {
     defaultErrorHandler: false
 });
 
-let port = Nconf.get("PORT");
+const port = Nconf.get("PORT");
 app.listen(port, () => {
     Log.info(`Listening on :${port}`);
 });

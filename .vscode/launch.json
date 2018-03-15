@@ -23,14 +23,21 @@
             "request": "launch",
             "name": "Launch Tests",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/spec/runner.ts",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-r",
+                "reflect-metadata",
+                "--no-timeouts",
+                "--colors",
+                "build/spec/**/*.js"
+            ],
             "outFiles": [
                 "${workspaceFolder}/build/spec/**/*.js"
             ],
+            "protocol": "inspector",
             "sourceMaps": true,
             "showAsyncStacks": true,
-            "console": "internalConsole",
-            "outputCapture": "std"
+            "console": "internalConsole"
         }
     ]
 }

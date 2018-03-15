@@ -1,4 +1,5 @@
 import { Mock, It, Times } from "typemoq";
+import { expect } from 'chai';
 import * as Bunyan from "bunyan";
 import { IRouterContext } from "koa-router";
 import { PipsController } from "../../src/controllers/pips-controller";
@@ -18,7 +19,7 @@ describe("PipsController", () => {
             let response = await pipsController.get(routerContextMock.object, requestString);
 
             // Assert
-            expect(response instanceof PipsResponse).toBeTruthy();
+            expect(response).to.be.an.instanceof(PipsResponse);
         });
 
         it("should call Bunyan.debug()", async () => {
@@ -41,7 +42,7 @@ describe("PipsController", () => {
             ), Times.once());
         });
 
-        it("should call IRouterContext.throw() if D20 constructor throws an error", async (done) => {
+        it("should call IRouterContext.throw() if D20 constructor throws an error", (done) => {
             // Arrange
             let logMock = Mock.ofType<Bunyan>();
             let routerContextMock = Mock.ofType<IRouterContext>();
@@ -51,9 +52,11 @@ describe("PipsController", () => {
 
             routerContextMock.setup(x => x.throw(It.isAnyNumber(), It.isAny(), It.isAny()));
 
-            // Act & Assert
-            // pass on error caught, fail on no error caught
-            pipsController.get(routerContextMock.object, requestString).then(() => done.fail()).catch(() => done());
+            // Act
+            const requestPromise = pipsController.get(routerContextMock.object, requestString);
+
+            // Assert
+            expect(requestPromise).to.eventually.be.rejected.and.notify(done);
             routerContextMock.verify(x => x.throw(
                 It.is<number>(code => code === 417),
                 It.isAny(),

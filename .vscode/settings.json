@@ -4,5 +4,9 @@
 		"ts-node/register",
     "reflect-metadata",
     "spec/support/setup.ts"
-  ]
+  ],
+  "files.exclude": {
+    ".nyc_output/": true,
+    "coverage/": true
+  }
 }

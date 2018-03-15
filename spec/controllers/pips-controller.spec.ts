@@ -42,7 +42,7 @@ describe("PipsController", () => {
             ), Times.once());
         });
 
-        it("should call IRouterContext.throw() if D20 constructor throws an error", (done) => {
+        it("should call IRouterContext.throw() if D20 constructor throws an error", () => {
             // Arrange
             let logMock = Mock.ofType<Bunyan>();
             let routerContextMock = Mock.ofType<IRouterContext>();
@@ -56,12 +56,13 @@ describe("PipsController", () => {
             const requestPromise = pipsController.get(routerContextMock.object, requestString);
 
             // Assert
-            expect(requestPromise).to.eventually.be.rejected.and.notify(done);
-            routerContextMock.verify(x => x.throw(
-                It.is<number>(code => code === 417),
-                It.isAny(),
-                It.is(obj => typeof obj === "object" && obj.hasOwnProperty("d20"))
-            ), Times.once());
+            return expect(requestPromise).to.eventually.be.rejected.then(() => {
+                routerContextMock.verify(x => x.throw(
+                    It.is<number>(code => code === 417),
+                    It.isAny(),
+                    It.is(obj => typeof obj === "object" && obj.hasOwnProperty("d20"))
+                ), Times.once());
+            });
         });
     });
 });

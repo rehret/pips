@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { D20 } from "../../src/models/d20";
 
 describe("D20 model", () => {
-    describe("constructor", () => {
+    describe("Constructor", () => {
         it("should accept a single string as arguments", () => {
             // Arrange
             let numDice = 1;

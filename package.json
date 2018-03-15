@@ -29,13 +29,10 @@
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
     "nconf": "^0.10.0",
-    "npm-build-tools": "^2.2.5",
     "reflect-metadata": "^0.1.12",
     "routing-controllers": "^0.7.6",
     "shortid": "^2.2.8",
-    "swagger2-koa": "^0.0.43",
-    "typemoq": "^2.1.0",
-    "typescript": "^2.7.2"
+    "swagger2-koa": "^0.0.43"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.4",
@@ -53,7 +50,10 @@
     "chai-as-promised": "^7.1.1",
     "jasmine-spec-reporter": "^4.2.1",
     "mocha": "^5.0.4",
+    "npm-build-tools": "^2.2.5",
     "sinon": "^4.4.6",
-    "ts-node": "^5.0.1"
+    "ts-node": "^5.0.1",
+    "typemoq": "^2.1.0",
+    "typescript": "^2.7.2"
   }
 }

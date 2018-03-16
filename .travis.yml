@@ -3,6 +3,6 @@ node_js:
   - "8"
 cache:
   yarn: true
-script: yarn test
+script: yarn test && yarn test:coverage
 notifications:
   email: false

@@ -1,7 +1,7 @@
 {
-	"mocha.files.glob": "spec/**/*.ts",
-	"mocha.requires": [
-		"ts-node/register",
+  "mocha.files.glob": "spec/**/*.ts",
+  "mocha.requires": [
+    "ts-node/register",
     "reflect-metadata",
     "spec/support/setup.ts"
   ],

@@ -6,40 +6,59 @@
 
 A tiny service which returns dice rolls for a given d20 string (ex: "1d6")
 
-# Prerequisites
-This project uses yarn rather than npm.
+## Getting Started
+#### Prerequisites
+[NodeJS](https://nodejs.org/) is required. It can be installed [here](https://nodejs.org/en/download/).
 
-Yarn can be installed with
-```bash
-npm install --global yarn
-```
+This project uses [yarn](https://yarnpkg.com) in place of npm. Follow [these instructions](https://yarnpkg.com/en/docs/install) to install yarn globally.
 
-# Setup
+> Warning: Windows users should not install [yarn](https://yarnpkg.com) via NPM, instead use the [downloadable](https://yarnpkg.com/latest.msi) MSI executable.
+
+Once installed, yarn is used to install all dependencies.
 ```bash
 yarn install
-yarn run build
+```
+
+#### Local Development
+```bash
+yarn develop
+```
+
+#### Running
+```bash
+yarn build
 yarn start
 ```
 
-# Development
+#### Testing
 ```bash
-yarn install
-yarn run develop
+yarn test
 ```
 
+## Contributing
+Make sure you have [tslint](https://www.npmjs.com/package/tslint) installed globally. This project is linted before each build. All code contributions should have zero linting errors.
 
-# Contributing
-This project uses [Github Flow](https://help.github.com/articles/github-flow/).
-When contributing to this repository, please open a pull request against the `master` branch.
-Feature branches should follow the `feature/<featureName>` naming convention.
+Also, install [EditorConfig](http://editorconfig.org/) in your editor. This will help keep a consistent code style throughout the project.
+
+This project makes use of [GitHub Flow](https://guides.github.com/introduction/flow/). As such, work should be done on a feature branch and a pull request opened against `master` once the work is complete. Feature branches should following the naming convention `feature/<feature-name>`.
 
 ## Pull Request Process
 Pull requests will undergo a technical and functional review. After both reviews have passed, and given that the base and feature branches are correct (as stated above), the pull request will be merged by the maintainer.
 
-## Issues
+#### Issues
 - Before opening a new [GitHub issue](https://github.com/rehret/pips/issues), please search the existing issues to see if it has already been reported.
 - When opening a new issue, please provide as much detail as possible, including, but not limited to: the full error message, file name and line number, and steps to reproduce.
 - Please avoid adding "+1" comments to issues. Instead, add the :+1: reaction to the orignal issue message.
 
-# License
-See LICENSE
+#### Versioning
+Version numbers will follow [SemVer](https://semver.org/) versioning:
+> Major.Minor.Patch
+
+For example, this is a valid version number:
+> 1.2.345
+
+Any changes that affect the major, minor, or patch versioning should have a tag pushed to `origin` with the SemVer version (consisting of major, minor, and patch).
+For example, if the project was at version `0.1.0` and it was decided that it was ready for official release, the tag `1.0.0` would be pushed to origin at that commit.
+
+## License
+See [LICENSE](LICENSE)

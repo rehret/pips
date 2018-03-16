@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/rehret/pips.svg?branch=master)](https://travis-ci.org/rehret/pips)
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/rehret/pips.svg?columns=all)](https://waffle.io/rehret/pips)
+[![Coverage Status](https://coveralls.io/repos/github/rehret/pips/badge.svg?branch=master)](https://coveralls.io/github/rehret/pips?branch=master)
 
 # Pips
 >Pips are dots indicating a unit of numerical value on dice or dominoes

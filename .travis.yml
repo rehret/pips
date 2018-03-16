@@ -3,6 +3,6 @@ node_js:
   - "8"
 cache:
   yarn: true
-script: yarn test && yarn test:coverage --reporter=min
+script: yarn test && yarn test:coverage --reporter=min && yarn nyc report --reporter=text-lcov | yarn coveralls
 notifications:
   email: false

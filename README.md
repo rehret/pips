@@ -61,4 +61,6 @@ Any changes that affect the major, minor, or patch versioning should have a tag 
 For example, if the project was at version `0.1.0` and it was decided that it was ready for official release, the tag `1.0.0` would be pushed to origin at that commit.
 
 ## License
-See [LICENSE](LICENSE)
+[MIT](LICENSE)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frehret%2Fpips.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frehret%2Fpips?ref=badge_large)

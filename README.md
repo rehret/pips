@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/rehret/pips.svg?branch=master)](https://travis-ci.org/rehret/pips)
 [![Coverage Status](https://coveralls.io/repos/github/rehret/pips/badge.svg?branch=master)](https://coveralls.io/github/rehret/pips?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frehret%2Fpips.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frehret%2Fpips?ref=badge_shield)
 
 # Pips
 >Pips are dots indicating a unit of numerical value on dice or dominoes
@@ -61,6 +62,8 @@ Any changes that affect the major, minor, or patch versioning should have a tag 
 For example, if the project was at version `0.1.0` and it was decided that it was ready for official release, the tag `1.0.0` would be pushed to origin at that commit.
 
 ## License
+
 [MIT](LICENSE)
+
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frehret%2Fpips.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frehret%2Fpips?ref=badge_large)

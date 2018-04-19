@@ -1,7 +1,6 @@
 import { Mock, It, Times } from "typemoq";
 import { expect } from "chai";
 import * as Bunyan from "bunyan";
-import { Request } from "express";
 import { PipsController } from "../../src/modules/pips/controllers/pips.controller";
 import { PipsResponse } from "../../src/modules/pips/models/pips-response";
 import { D20Service } from "../../src/modules/pips/components/d20.service";
@@ -11,7 +10,7 @@ describe("PipsController", () => {
         it("should return an instance of PipsResponse", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const requestMock = Mock.ofType<Request>();
+            const requestMock = Mock.ofType<any>();
             const d20ServiceMock = Mock.ofType<D20Service>();
             const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 
@@ -27,7 +26,7 @@ describe("PipsController", () => {
         it("should call Bunyan.debug()", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const requestMock = Mock.ofType<Request>();
+            const requestMock = Mock.ofType<any>();
             const d20ServiceMock = Mock.ofType<D20Service>();
             const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 
@@ -49,7 +48,7 @@ describe("PipsController", () => {
         it("should throw if D20Service throws an error", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const requestMock = Mock.ofType<Request>();
+            const requestMock = Mock.ofType<any>();
             const d20ServiceMock = Mock.ofType<D20Service>();
             const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 

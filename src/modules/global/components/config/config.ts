@@ -13,3 +13,5 @@ Nconf
     .file("environmentConfig", `${__dirname}/${env.toLowerCase()}.json`)
     .file("defaultConfig", `${__dirname}/default.json`)
     .required(["PORT", "LOG_FILE_PATH"]);
+
+export { Nconf as Config };

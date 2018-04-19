@@ -16,7 +16,7 @@
     "lint": "tslint src/**/*.ts spec/**/*.ts",
     "prebuild": "yarn lint",
     "build": "tsc",
-    "postbuild": "n-copy -s src/config -d build/src/config \"**/*.json\" && n-copy -s . -d build \"openapi.json\" && n-copy -s spec -d build/spec \"**/*.json\"",
+    "postbuild": "n-copy -s src/modules/global/components/config -d build/src/modules/global/components/config \"**/*.json\" && n-copy -s spec -d build/spec \"**/*.json\"",
     "clean": "n-clean build",
     "pretest": "yarn build",
     "test": "yarn test:no-build",

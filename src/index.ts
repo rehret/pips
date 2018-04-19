@@ -1,30 +1,24 @@
-import "./config/config";
+import { Config } from "./modules/global/components/config/config";
+import { NestFactory } from "@nestjs/core";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
+import * as Bunyan from "bunyan";
+import { AppModule } from "./app.module";
+import { GlobalModule } from "./modules/global";
+import { ErrorLogger } from "./modules/global/exception-filters/error-logger";
+import { NestLogger } from "./helpers/nest-logger";
 
-// prerequisite for routing-controllers
-import "reflect-metadata";
+(async function bootstrap() {
+    const app = await NestFactory.create(AppModule, {logger: new NestLogger()});
+    app.useGlobalFilters(app.select(GlobalModule).get(ErrorLogger));
 
-import * as Nconf from "nconf";
-import { Log } from "./log";
-import * as Koa from "koa";
-import { useKoaServer, useContainer } from "routing-controllers";
-import { Container } from "./config/inversify-config";
-import { ui } from "swagger2-koa";
+    const options = new DocumentBuilder()
+        .setTitle("Pips")
+        .setVersion("v2.0")
+        .addTag("Pips")
+        .build();
+    const document = SwaggerModule.createDocument(app, options);
+    SwaggerModule.setup("/docs", app, document);
 
-useContainer(Container);
-
-const app = new Koa();
-
-// tslint:disable-next-line:no-var-requires
-const swaggerDoc = require("../openapi.json");
-app.use(ui(swaggerDoc, "/docs"));
-
-useKoaServer(app, {
-    controllers: [`${__dirname}/controllers/*.[tj]s`],
-    middlewares: [`${__dirname}/middleware/*.[tj]s`],
-    defaultErrorHandler: false
-});
-
-const port = Nconf.get("PORT");
-app.listen(port, () => {
-    Log.info(`Listening on :${port}`);
-});
+    await app.listen(Config.get("PORT"));
+    app.select(GlobalModule).get(Bunyan).info(`Service running on :${Config.get("PORT")}`);
+})();

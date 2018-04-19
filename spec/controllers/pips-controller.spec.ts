@@ -1,39 +1,42 @@
 import { Mock, It, Times } from "typemoq";
 import { expect } from "chai";
 import * as Bunyan from "bunyan";
-import { IRouterContext } from "koa-router";
-import { PipsController } from "../../src/controllers/pips-controller";
-import { PipsResponse } from "../../src/models/pips-response";
+import { Request } from "express";
+import { PipsController } from "../../src/modules/pips/controllers/pips.controller";
+import { PipsResponse } from "../../src/modules/pips/models/pips-response";
+import { D20Service } from "../../src/modules/pips/components/d20.service";
 
 describe("PipsController", () => {
     describe("get()", () => {
-        it("should return an instance of PipsResponse", async () => {
+        it("should return an instance of PipsResponse", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const routerContextMock = Mock.ofType<IRouterContext>();
-            const pipsController = new PipsController(logMock.object);
+            const requestMock = Mock.ofType<Request>();
+            const d20ServiceMock = Mock.ofType<D20Service>();
+            const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 
             const requestString = "1d20";
 
             // Act
-            const response = await pipsController.get(routerContextMock.object, requestString);
+            const response = pipsController.get(requestMock.object, requestString);
 
             // Assert
             expect(response).to.be.an.instanceof(PipsResponse);
         });
 
-        it("should call Bunyan.debug()", async () => {
+        it("should call Bunyan.debug()", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const routerContextMock = Mock.ofType<IRouterContext>();
-            const pipsController = new PipsController(logMock.object);
+            const requestMock = Mock.ofType<Request>();
+            const d20ServiceMock = Mock.ofType<D20Service>();
+            const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 
             const requestString = "1d20";
 
             logMock.setup((x) => x.debug(It.isAny(), It.isAnyString()));
 
             // Act
-            await pipsController.get(routerContextMock.object, requestString);
+            pipsController.get(requestMock.object, requestString);
 
             // Assert
             logMock.verify((x) => x.debug(
@@ -42,27 +45,19 @@ describe("PipsController", () => {
             ), Times.once());
         });
 
-        it("should call IRouterContext.throw() if D20 constructor throws an error", () => {
+        // tslint:disable-next-line:no-unused-expression
+        it("should throw if D20Service throws an error", () => {
             // Arrange
             const logMock = Mock.ofType<Bunyan>();
-            const routerContextMock = Mock.ofType<IRouterContext>();
-            const pipsController = new PipsController(logMock.object);
+            const requestMock = Mock.ofType<Request>();
+            const d20ServiceMock = Mock.ofType<D20Service>();
+            const pipsController = new PipsController(logMock.object, d20ServiceMock.object);
 
             const requestString = "0d20";
 
-            routerContextMock.setup((x) => x.throw(It.isAnyNumber(), It.isAny(), It.isAny()));
-
-            // Act
-            const requestPromise = pipsController.get(routerContextMock.object, requestString);
-
-            // Assert
-            return expect(requestPromise).to.eventually.be.rejected.then(() => {
-                routerContextMock.verify((x) => x.throw(
-                    It.is<number>((code) => code === 417),
-                    It.isAny(),
-                    It.is((obj) => typeof obj === "object" && obj.hasOwnProperty("d20"))
-                ), Times.once());
-            });
+            // Act & Assert
+            // tslint:disable-next-line:no-unused-expression
+            expect(() => pipsController.get(requestMock.object, requestString)).to.throw;
         });
     });
 });

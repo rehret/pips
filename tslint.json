@@ -9,6 +9,12 @@
             true,
             "double"
         ],
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore"
+        ],
         "ordered-imports": false,
         "trailing-comma": false,
         "object-literal-sort-keys": false

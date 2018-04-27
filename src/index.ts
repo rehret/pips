@@ -4,12 +4,10 @@ import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 import * as Bunyan from "bunyan";
 import { AppModule } from "./app.module";
 import { GlobalModule } from "./modules/global";
-import { ErrorLogger } from "./modules/global/exception-filters/error-logger";
 import { NestLogger } from "./helpers/nest-logger";
 
 (async function bootstrap() {
     const app = await NestFactory.create(AppModule, {logger: new NestLogger()});
-    app.useGlobalFilters(app.select(GlobalModule).get(ErrorLogger));
 
     const options = new DocumentBuilder()
         .setTitle("Pips")

@@ -22,6 +22,7 @@ export class PipsController {
             d20 = this.d20Service.ParseD20String(d20String);
         } catch (err) {
             // error occurred during D20 parsing, so it was a problem with the d20string
+            this.log.error({requestId: req.state.requestId}, err.message);
             throw new BadRequestException(err.message);
         }
 

@@ -3,11 +3,10 @@ import { LoggerProvider } from "./providers/logger.provider";
 import { RequestState } from "./middleware/request-state";
 import { RequestId } from "./middleware/request-id";
 import { RequestLogger } from "./middleware/request-logger";
-import { ErrorLogger } from "./exception-filters/error-logger";
 
 @Global()
 @Module({
-    components: [LoggerProvider, ErrorLogger],
+    components: [LoggerProvider],
     exports: [LoggerProvider]
 })
 export class GlobalModule implements NestModule {

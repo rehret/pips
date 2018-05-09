@@ -52,7 +52,7 @@
     "jasmine-spec-reporter": "^4.2.1",
     "mocha": "^5.1.0",
     "npm-build-tools": "^2.2.5",
-    "nyc": "^11.6.0",
+    "nyc": "^11.7.2",
     "sinon": "^5.0.7",
     "ts-node": "^6.0.3",
     "tslint": "^5.10.0",

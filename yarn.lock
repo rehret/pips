@@ -38,10 +38,11 @@
     lodash "^4.17.4"
     swagger-ui-express "^3.0.8"
 
-"@nestjs/testing@^4.6.6":
-  version "4.6.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-4.6.6.tgz#e47c9a9ff8da666eb31eafcf2c4c84ac8c2e99fa"
+"@nestjs/testing@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.0.0.tgz#d44a48b9885a3160e31629b9fa8bee3512e931fd"
   dependencies:
+    deprecate "1.0.0"
     optional "0.1.4"
 
 "@nestjs/websockets@^4.6.6":
@@ -944,6 +945,10 @@ depd@1.1.1:
 depd@~1.1.0, depd@~1.1.1, depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
+
+deprecate@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/deprecate/-/deprecate-1.0.0.tgz#661490ed2428916a6c8883d8834e5646f4e4a4a8"
 
 destroy@~1.0.4:
   version "1.0.4"

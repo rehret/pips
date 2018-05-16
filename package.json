@@ -25,16 +25,16 @@
     "test:coverage": "nyc mocha spec/**/*.ts"
   },
   "dependencies": {
-    "@nestjs/common": "^4.6.6",
-    "@nestjs/core": "^4.6.6",
-    "@nestjs/microservices": "^4.6.6",
+    "@nestjs/common": "^5.0.0",
+    "@nestjs/core": "^5.0.0",
+    "@nestjs/microservices": "^5.0.0",
     "@nestjs/swagger": "^2.0.0",
     "@nestjs/testing": "^5.0.0",
     "@nestjs/websockets": "^5.0.0",
     "bunyan": "^1.8.12",
     "nconf": "^0.10.0",
     "reflect-metadata": "0.1.10",
-    "rxjs": "^5.5.10",
+    "rxjs": "^6.0.0",
     "shortid": "^2.2.8"
   },
   "devDependencies": {

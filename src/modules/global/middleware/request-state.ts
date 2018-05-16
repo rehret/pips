@@ -1,8 +1,8 @@
-import { Middleware, NestMiddleware, ExpressMiddleware } from "@nestjs/common";
+import { Injectable, NestMiddleware, MiddlewareFunction } from "@nestjs/common";
 
-@Middleware()
+@Injectable()
 export class RequestState implements NestMiddleware {
-    public resolve(): ExpressMiddleware {
+    public resolve(): MiddlewareFunction {
         return async (req, res, next) => {
             if (!req.state) {
                 req.state = {};

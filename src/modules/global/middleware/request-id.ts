@@ -1,9 +1,9 @@
-import { Middleware, NestMiddleware, ExpressMiddleware } from "@nestjs/common";
+import { Injectable, NestMiddleware, MiddlewareFunction } from "@nestjs/common";
 import * as ShortId from "shortid";
 
-@Middleware()
+@Injectable()
 export class RequestId implements NestMiddleware {
-    public resolve(): ExpressMiddleware {
+    public resolve(): MiddlewareFunction {
         return async (req, res, next) => {
             req.state.requestId = ShortId.generate();
             res.state.requestId = req.state.requestId;

@@ -4,6 +4,6 @@ import { D20Service } from "./components/d20.service";
 
 @Module({
     controllers: [PipsController],
-    components: [D20Service]
+    providers: [D20Service]
 })
 export class PipsModule {}

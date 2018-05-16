@@ -30,7 +30,7 @@
     "@nestjs/microservices": "^4.6.6",
     "@nestjs/swagger": "^2.0.0",
     "@nestjs/testing": "^5.0.0",
-    "@nestjs/websockets": "^4.6.6",
+    "@nestjs/websockets": "^5.0.0",
     "bunyan": "^1.8.12",
     "nconf": "^0.10.0",
     "reflect-metadata": "0.1.10",

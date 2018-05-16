@@ -45,9 +45,9 @@
     deprecate "1.0.0"
     optional "0.1.4"
 
-"@nestjs/websockets@^4.6.6":
-  version "4.6.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-4.6.6.tgz#f09b72ce835ae7d305d59e93ad35b1f4304f2a8f"
+"@nestjs/websockets@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-5.0.0.tgz#a1c1e5cec9d5b42b6d15e3303eef74315691c226"
   dependencies:
     iterare "0.0.8"
     socket.io "^2.0.3"

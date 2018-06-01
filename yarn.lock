@@ -30,9 +30,9 @@
     json-socket "^0.2.1"
     optional "0.1.4"
 
-"@nestjs/swagger@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-2.0.0.tgz#acab036e08d5303ab46aded847bb2b532f0951e8"
+"@nestjs/swagger@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-2.0.2.tgz#74aae53047031e1ba1317153c9cbf4ff306bdcc7"
   dependencies:
     lodash "^4.17.4"
     swagger-ui-express "^3.0.8"

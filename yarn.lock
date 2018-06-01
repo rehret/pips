@@ -21,9 +21,9 @@
     iterare "0.0.8"
     optional "0.1.4"
 
-"@nestjs/microservices@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.0.0.tgz#249bb02517f69d4f83979dd515adb5deffed9879"
+"@nestjs/microservices@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.0.1.tgz#468c94178698d8f3ec91a2d1afdd910db3eb8704"
   dependencies:
     iterare "0.0.8"
     json-socket "^0.2.1"

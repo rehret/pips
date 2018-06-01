@@ -25,7 +25,7 @@
     "test:coverage": "nyc mocha spec/**/*.ts"
   },
   "dependencies": {
-    "@nestjs/common": "^5.0.0",
+    "@nestjs/common": "^5.0.1",
     "@nestjs/core": "^5.0.1",
     "@nestjs/microservices": "^5.0.1",
     "@nestjs/swagger": "^2.0.0",

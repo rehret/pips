@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@nestjs/common@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.0.0.tgz#2c8efc94b7002bf2dc55204ec825432d7e1f53e8"
+"@nestjs/common@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.0.1.tgz#98378d3578c8d1f337452b06f83abad42e1e0cee"
   dependencies:
     axios "0.17.1"
     cli-color "1.2.0"

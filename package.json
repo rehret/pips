@@ -28,7 +28,7 @@
     "@nestjs/common": "^5.0.1",
     "@nestjs/core": "^5.0.1",
     "@nestjs/microservices": "^5.0.1",
-    "@nestjs/swagger": "^2.0.2",
+    "@nestjs/swagger": "^2.2.0",
     "@nestjs/testing": "^5.0.1",
     "@nestjs/websockets": "^5.0.1",
     "bunyan": "^1.8.12",

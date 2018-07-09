@@ -102,9 +102,9 @@
     object-hash "1.3.0"
     optional "0.1.4"
 
-"@nestjs/microservices@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.0.1.tgz#468c94178698d8f3ec91a2d1afdd910db3eb8704"
+"@nestjs/microservices@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.1.0.tgz#3546cb01783a8b51ccff793870b1f8df96d09a0d"
   dependencies:
     iterare "0.0.8"
     json-socket "^0.2.1"

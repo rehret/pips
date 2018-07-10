@@ -11,7 +11,7 @@ import { RequestLogger } from "./middleware/request-logger";
 })
 export class GlobalModule implements NestModule {
     public configure(consumer: MiddlewareConsumer) {
-        consumer.apply([RequestState, RequestId, RequestLogger])
+        consumer.apply(RequestState, RequestId, RequestLogger)
             .forRoutes("*");
     }
 }

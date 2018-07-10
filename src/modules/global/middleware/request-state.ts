@@ -12,7 +12,9 @@ export class RequestState implements NestMiddleware {
                 res.state = {};
             }
 
-            return await next();
+            if (next) {
+                return await next();
+            }
         };
     }
 }

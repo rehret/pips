@@ -7,7 +7,9 @@ export class RequestId implements NestMiddleware {
         return async (req, res, next) => {
             req.state.requestId = ShortId.generate();
             res.state.requestId = req.state.requestId;
-            return await next();
+            if (next) {
+                return await next();
+            }
         };
     }
 }

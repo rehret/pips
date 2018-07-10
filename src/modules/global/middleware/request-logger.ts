@@ -16,7 +16,10 @@ export class RequestLogger implements NestMiddleware {
                     req
                 }, "Request received");
             }
-            return await next();
+
+            if (next) {
+                return await next();
+            }
         };
     }
 }

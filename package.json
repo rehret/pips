@@ -27,7 +27,7 @@
   "dependencies": {
     "@nestjs/common": "^5.1.0",
     "@nestjs/core": "^5.1.0",
-    "@nestjs/swagger": "^2.3.0",
+    "@nestjs/swagger": "^2.4.3",
     "@nestjs/testing": "^5.1.0",
     "bunyan": "^1.8.12",
     "nconf": "^0.10.0",

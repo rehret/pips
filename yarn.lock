@@ -82,9 +82,9 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@nestjs/common@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.1.0.tgz#e6ad84c74f244a9e9b94ace8678485a2f8e10cef"
+"@nestjs/common@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.2.1.tgz#82aa23f845995419b23de46b1519bf9c7ea77a4c"
   dependencies:
     axios "0.17.1"
     cli-color "1.2.0"

@@ -110,9 +110,9 @@
     path-to-regexp "^2.2.1"
     swagger-ui-express "^3.0.8"
 
-"@nestjs/testing@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.1.0.tgz#a8fb8abd415a03bfcc9d6bf55282179a5d708a1f"
+"@nestjs/testing@^5.7.4":
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.7.4.tgz#418e993416bd0c1b27b3adf14cc7d59f4ff2a622"
   dependencies:
     deprecate "1.0.0"
     optional "0.1.4"
